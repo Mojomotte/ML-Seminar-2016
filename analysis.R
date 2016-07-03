@@ -99,13 +99,15 @@ metrics_s6.3$accuracy_mean
 metrics_s6.3$kappa_mean
 metrics_s6.4$accuracy_mean
 metrics_s6.4$kappa_mean
+metrics_s6.5$accuracy_mean
+metrics_s6.5$kappa_mean
 
 #histogramms
 #...
 
 #metric change through out sub-scenarios
-acc<-as.data.frame(rbind(metrics_s6.1$accuracy_mean,metrics_s6.2$accuracy_mean,metrics_s6.3$accuracy_mean,metrics_s6.4$accuracy_mean))
-kap<-as.data.frame(rbind(metrics_s6.1$kappa_mean,metrics_s6.2$kappa_mean,metrics_s6.3$kappa_mean,metrics_s6.4$kappa_mean))
+acc<-as.data.frame(rbind(metrics_s6.1$accuracy_mean,metrics_s6.2$accuracy_mean,metrics_s6.3$accuracy_mean,metrics_s6.4$accuracy_mean,metrics_s6.5$accuracy_mean))
+kap<-as.data.frame(rbind(metrics_s6.1$kappa_mean,metrics_s6.2$kappa_mean,metrics_s6.3$kappa_mean,metrics_s6.4$kappa_mean,metrics_s6.5$kappa_mean))
 vis_change(acc,kap)
 
 
@@ -190,17 +192,38 @@ metrics_s11.3$accuracy_mean
 metrics_s11.3$kappa_mean
 metrics_s11.4$accuracy_mean
 metrics_s11.4$kappa_mean
+metrics_s11.5$accuracy_mean
+metrics_s11.5$kappa_mean
 
 #histogramms
 #...
 
 #metric change through out sub-scenarios
-acc<-as.data.frame(rbind(metrics_s11.1$accuracy_mean,metrics_s11.2$accuracy_mean,metrics_s11.3$accuracy_mean,metrics_s11.4$accuracy_mean))
-kap<-as.data.frame(rbind(metrics_s11.1$kappa_mean,metrics_s11.2$kappa_mean,metrics_s11.3$kappa_mean,metrics_s11.4$kappa_mean))
+acc<-as.data.frame(rbind(metrics_s11.1$accuracy_mean,metrics_s11.2$accuracy_mean,metrics_s11.3$accuracy_mean,metrics_s11.4$accuracy_mean,metrics_s11.5$accuracy_mean))
+kap<-as.data.frame(rbind(metrics_s11.1$kappa_mean,metrics_s11.2$kappa_mean,metrics_s11.3$kappa_mean,metrics_s11.4$kappa_mean,metrics_s11.5$kappa_mean))
 vis_change(acc,kap)
 
 
 
+
+#scenario 12 (?)
+#---------------------------------------------------------
+
+#metric means
+metrics_s12.1$accuracy_mean
+metrics_s12.1$kappa_mean
+metrics_s12.2$accuracy_mean
+metrics_s12.2$kappa_mean
+metrics_s12.3$accuracy_mean
+metrics_s12.3$kappa_mean
+
+#histogramms
+#...
+
+#metric change through out sub-scenarios
+acc<-as.data.frame(rbind(metrics_s12.1$accuracy_mean,metrics_s12.2$accuracy_mean,metrics_s12.3$accuracy_mean))
+kap<-as.data.frame(rbind(metrics_s12.1$kappa_mean,metrics_s12.2$kappa_mean,metrics_s12.3$kappa_mean))
+vis_change(acc,kap)
 
 
 

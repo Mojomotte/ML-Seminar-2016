@@ -73,6 +73,7 @@ metrics_s6.1<-simulate_com(lvl2 = "y", model_type = "random",nrand = 1, n=500, n
 metrics_s6.2<-simulate_com(lvl2 = "y", model_type = "random",nrand = 2, n=500, nx=5)
 metrics_s6.3<-simulate_com(lvl2 = "y", model_type = "random",nrand = 3, n=500, nx=5)
 metrics_s6.4<-simulate_com(lvl2 = "y", model_type = "random",nrand = 5, n=500, nx=5)
+metrics_s6.5<-simulate_com(lvl2 = "y", model_type = "random",nrand = 10, n=500, nx=5)
 
 
 #scenario 7 (5)
@@ -123,7 +124,7 @@ metrics_s10.3<-simulate_com(lvl2 = "n",n=500,nx=30)
 #multinom of package nnet can't predict for nx=50 in unrestricted case (error: too many weights)
 
 
-#scenario 11 (8)
+#scenario 11 (?)
 #---------------------------------------------------------
 #decrease number of observations (normal distribution)
 #n=300/100/50/30
@@ -133,11 +134,18 @@ metrics_s11.1<-simulate_com(lvl2 = "n",n=300,nx=5)
 metrics_s11.2<-simulate_com(lvl2 = "n",n=100,nx=5)
 metrics_s11.3<-simulate_com(lvl2 = "n",n=50,nx=5)
 metrics_s11.4<-simulate_com(lvl2 = "n",n=30,nx=5)
+metrics_s11.5<-simulate_com(lvl2 = "n",n=20,nx=5)
 
 
-
-
-
+#scenario 12 (?)
+#---------------------------------------------------------
+#increase number of observations (normal distribution)
+#n=1000/2000/5000
+#nx=5
+#y with c=6 classes
+metrics_s12.1<-simulate_com(lvl2 = "n",n=1000,nx=5)
+metrics_s12.2<-simulate_com(lvl2 = "n",n=2000,nx=5)
+metrics_s12.3<-simulate_com(lvl2 = "n",n=5000,nx=5)
 
 
 

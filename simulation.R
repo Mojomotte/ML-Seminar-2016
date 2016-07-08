@@ -20,7 +20,7 @@ set.seed(42)
 metrics_s1<-simulate_com(lvl2 = "n",n=500,nx=5)
 
 
-#scenario 2 ()
+#scenario 2 (-)
 #---------------------------------------------------------
 #only data from uniform distribution
 #n=500
@@ -51,7 +51,7 @@ metrics_s4.2<-simulate_com(lvl2 = "y",model_type = "categorical",n=500,c3x=5)
 metrics_s4.3<-simulate_com(lvl2 = "y",model_type = "categorical",n=500,c5x=5)
 
 
-#scenario 5 ()
+#scenario 5 (-)
 #---------------------------------------------------------
 #mixed class categorical data (discretely uniform distributed)
 #n=500
@@ -85,7 +85,7 @@ metrics_s6.5<-simulate_com(lvl2 = "y", model_type = "random",nrand = 10, n=500, 
 metrics_s7<-simulate_com(lvl2 = "y",model_type = "multi",n=500,nx=5)
 
 
-#scenario 8 ()
+#scenario 8 (-)
 #---------------------------------------------------------
 #uniform distributed data with multi-collinearity
 #n=500
@@ -105,6 +105,7 @@ metrics_s9.1<-simulate_com(lvl2 = "n",restrict_lvl = TRUE,n=500,nx=10)
 metrics_s9.2<-simulate_com(lvl2 = "n",restrict_lvl = TRUE,n=500,nx=25)
 metrics_s9.3<-simulate_com(lvl2 = "n",restrict_lvl = TRUE,n=500,nx=50)
 
+
 #metrics_s9.4<-simulate_com(lvl2 = "n",restrict_lvl = TRUE,n=500,nx=100)
 #multinom of package nnet can't predict for nx=100 (error: too many weights)
 
@@ -115,13 +116,14 @@ metrics_s9.3<-simulate_com(lvl2 = "n",restrict_lvl = TRUE,n=500,nx=50)
 #don't restrict number of classes of y, that means we increase c equivalent to nx 
 #n=500
 #nx=10/20/30/(50)
-#y with c= 11/21/31/(51) classes
+#y with c= 11/21/31/(41) classes
 metrics_s10.1<-simulate_com(lvl2 = "n",n=500,nx=10)
 metrics_s10.2<-simulate_com(lvl2 = "n",n=500,nx=20)
 metrics_s10.3<-simulate_com(lvl2 = "n",n=500,nx=30)
 
-#metrics_s10.3<-simulate_com(lvl2 = "n",n=500,nx=50)
+#metrics_s10.4<-simulate_com(lvl2 = "n",n=500,nx=40)
 #multinom of package nnet can't predict for nx=50 in unrestricted case (error: too many weights)
+
 
 
 #scenario 11 (?)

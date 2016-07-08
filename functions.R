@@ -22,6 +22,8 @@ library(caTools)
 library(reshape2)
 #library(irr)
 #library(caret)
+library(xtable)
+library(knitr)
 
 #----------------------------
 
@@ -617,6 +619,34 @@ vis_hist<-function(data, binWidth=0.025){
 
 
 
+#4
+#------------------------------------------------------------------------------------------
+
+#this function formats the data from the output-lists for representation in a table
+form_dat<-function(mlist, Mode=c("accuracy", "kappa") ){
+  Mode<-match.arg(Mode)
+  tab_row<-c(0)
+  
+  if(Mode=="accuracy"){
+    for (i in 1:4) {
+      tab_row<-cbind(tab_row, mlist[[2]][i],sqrt(mlist[[3]][i]))
+    }
+    tab_row<-tab_row[,2:dim(tab_row)[2]]
+    names(tab_row)<-c("rpart_mean","rpart_sd","c50_mean","c50_sd","rForest_mean","rForest_sd","mult_mean","mult_sd")
+    
+    return(tab_row)
+  }
+  
+  if(Mode=="kappa"){
+    for (i in 1:4) {
+      tab_row<-cbind(tab_row, mlist[[5]][i],sqrt(mlist[[6]][i]))
+    }
+    tab_row<-tab_row[,2:dim(tab_row)[2]]
+    names(tab_row)<-c("rpart_mean","rpart_sd","c50_mean","c50_sd","rForest_mean","rForest_sd","mult_mean","mult_sd")
+    
+    return(tab_row)
+  }
+}
 
 
 
